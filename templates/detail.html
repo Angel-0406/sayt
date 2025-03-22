@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for b in new %}
+    <a href="{% url 'news_detail_page' b.id %}"><h1>{{ b.title }}</h1></a>
+{% endfor %}
+</body>
+</html>

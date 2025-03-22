@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<ul>
+    {% for baza in yangi %}
+        <a href="{{ baza.get_absolute_url }}"><h1>{{ baza.title }}</h1></a>
+        <a href="{% url 'news_detail_page' baza.id %}"> <img
+                                src="/media/{{ baza.image }}" alt=""></a>
+        <a href="{% url 'news_detail_page' baza.id %}"><h1>{{ baza.body }}</h1></a>
+    {% endfor %}
+</ul>
+
+{% endblock content %}
